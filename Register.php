@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>register form</title>
+        <title>user registeration form</title>
     </head>
     <body>
         <div class="header">
