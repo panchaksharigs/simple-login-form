@@ -22,7 +22,7 @@
        $sql="INSERT INTO gsp (username,email,password) values('$username','$email','$pass')";
        $result=mysqli_query($conn,$sql);
        if($result){
-           echo "record added";
+          header("location:simple.php");
        }
        else{
            echo "check query";
