@@ -3,7 +3,7 @@
         <title>list of users</title>
     </head>
     <body>
-    <table>
+    <table >
         <thead>
             
             <tr>
