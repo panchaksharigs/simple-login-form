@@ -13,7 +13,7 @@ if(isset($_POST['login']))
         
         header("location:simple.php");
       } else{
-        echo " bye";
+        echo " login fail";
       }        
 }
 ?>

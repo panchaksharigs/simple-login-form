@@ -1,21 +1,32 @@
-<?php
-error_reporting(0);
-require_once('conn.php');
-$conn=mysqli_connect("localhost","root","","register");
-
-$sql="SELECT * from gsp";
-
-$result=mysqli_query($conn,$sql);
-
-$row=mysqli_num_rows($result);
-
-    
-if($row>0){
-    while($row=mysqli_fetch_assoc($result)){
-        echo   $row['id']  ."hii r u  "  .  $row[ 'username'];
-        echo"<br>";
-    }
-}
-
-
-?>
+<html>
+    <head>
+        <title>list of users</title>
+    </head>
+    <body>
+    <table>
+        <thead>
+            
+            <tr>
+                <th>user name</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <?php
+        require_once('conn.php');
+        $conn=mysqli_connect('localhost','root','','register');
+        $result=mysqli_query($conn,"select * from gsp ");
+        $cnt=1;
+        while($row=mysqli_fetch_array($result)){
+            ?>
+            <tr>
+                
+                <td><?php echo $row['username'];?></td>
+                <td><?php echo $row['email'];?></td>
+                <?php
+                $cnt=$cnt+1;
+        
+        }
+        ?>
+        </table>
+    </body>
+        </html> 
